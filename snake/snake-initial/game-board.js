@@ -10,7 +10,7 @@ const gameBoard = document.getElementById("game-board");
 function main(currentTime) {
     if (gameOver) {
         if (confirm('You lost. Press ok to restart.')) {
-            window.location = '/';
+            window.location = '/snake/snake-initial';
         }
         return;
     }
@@ -25,7 +25,17 @@ function main(currentTime) {
     draw();
 }
 
-window.requestAnimationFrame(main)
+function startGame(e) {
+    let start = false;
+    if(e.key === 'ArrowDown') {
+        return
+    } else {
+        const modal = document.getElementById("startGame");
+        modal.classList.add('hidden')
+        window.requestAnimationFrame(main)
+        window.removeEventListener('keydown',startGame)
+    }
+}
 
 function update() {
     updateSnake();
@@ -42,3 +52,7 @@ function draw() {
 function checkDeath() {
     gameOver = outsideGrid(getSnakeHead()) || snakeIntersection()
 }
+
+
+window.addEventListener('keydown', startGame)
+draw();
