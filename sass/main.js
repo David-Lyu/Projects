@@ -1,1 +1,1 @@
-console.log('vs-code');
+console.log('vs-code-terminal');
