@@ -1,0 +1,55 @@
+@import global
+
+$font: 'Roboto', sans-serif
+$font-color-primary: black
+$font-color-secondary: rgb(73, 54, 54)
+
+$primary-color: rgba(255, 255, 255, 0.5)
+$secondary-color: rgb(202, 59, 59)
+
+
+// #Mixins
+
+@mixin center
+  margin-left: auto
+  margin-right: auto
+
+
+@mixin flex
+  display: flex
+
+
+@mixin flex-center
+  @include flex
+  justify-content: center
+  align-items: center
+
+
+@mixin heading($bold: 100px)
+  font-weight: $bold
+
+
+// #elements
+
+body
+  font-family: $font
+  background: $primary-color
+  // #background: black
+  color: $font-color-secondary
+  display: grid
+  & > *:not(script)
+    @include flex-center
+    width: 100%
+
+
+
+// heading
+@for $index from 1 through 6
+  h#{$index}
+    font-size: 0.5rem + (6-$index)
+    @if $index <= 2
+      @include heading($bold: 900)
+    @else if $index <=4
+      @include heading($bold: 700)
+    @else
+      @include heading($bold: 500)
