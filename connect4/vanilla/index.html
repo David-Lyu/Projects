@@ -14,13 +14,13 @@
     <dialog id="start-modal" class="modal">
       <h4>Play Connect Four</h4>
       <p>Please enter amount of columns and rows you want to play with</p>
-      <div class="start-inputs">
+      <form id="start-form" class="start-inputs">
         <label for="rows">Rows</label>
-        <input id="rows" />
+        <input id="rows" name="rows" value="7" />
         <label for="columns">Columns</label>
-        <input id="columns" />
+        <input id="columns" name="column" value="6" />
         <button>Start</button>
-      </div>
+      </form>
     </dialog>
   </main>
   <script src="./main.js" type="module"></script>

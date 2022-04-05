@@ -2,4 +2,39 @@
   background: rgba(0, 0, 0, 0.6);
 }
 
+main {
+  height: 96.5vh;
+  width: 100%;
+}
+main > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.row {
+  background-color: chocolate;
+  height: 100%;
+  flex: auto;
+  border: black 1px solid;
+  border-width: 0 0 0 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.row:last-child {
+  border-right: black solid 1px;
+}
+
+.col {
+  border-top: 1px solid black;
+  flex: 1;
+}
+
+.col:last-child {
+  border-bottom: 1px solid black;
+}
+
 /*# sourceMappingURL=style.css.map */
