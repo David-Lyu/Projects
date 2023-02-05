@@ -5,6 +5,7 @@ interface Props {
   setGameBoardMap: React.Dispatch<React.SetStateAction<number[]>>;
 }
 export default function Start({ setIsStarted, setGameBoardMap }: Props) {
+  //don't need could just use top level state to hold onto this
   const [rowNum, setRowNum] = useState(9);
   const [colNum, setColNum] = useState(9);
 
