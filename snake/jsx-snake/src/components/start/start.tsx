@@ -32,7 +32,9 @@ export default function Start({ setIsStarted, setGameBoardMap }: Props) {
 
   return (
     <form className="start-menu row" onSubmit={handleOnSubmit}>
-      <label htmlFor="game-row">Please enter rows between 4-9</label>
+      <label className="col-12" htmlFor="game-row">
+        Please enter rows between 4-9
+      </label>
       <input
         type="number"
         id="game-row"
@@ -44,7 +46,9 @@ export default function Start({ setIsStarted, setGameBoardMap }: Props) {
         className="col-12"
         onChange={onChange}
       />
-      <label htmlFor="game-col">Please enter columns between 4-9</label>
+      <label className="col-12" htmlFor="game-col">
+        Please enter columns between 4-9
+      </label>
       <input
         type="number"
         id="game-col"
